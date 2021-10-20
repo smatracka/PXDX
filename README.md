@@ -2,7 +2,7 @@
 
 Creative Agency, UX/UI Designers Portfolio Website
 
-[comment]: <> (![Image Stack]&#40;https://tympanus.net/codrops/wp-content/uploads/2020/11/IntroImageStackAnimation_featured.jpg&#41;)
+![Image Stack](src/img/MAINPAGE.jpg)
 
 [comment]: <> ([Article on Codrops]&#40;https://tympanus.net/codrops/?p=52018&#41;)
 

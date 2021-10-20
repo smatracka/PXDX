@@ -1,12 +1,12 @@
-# Image Stack Intro Animation
+# PXDX STUDIO
 
-A simple intro animation where an image stack moves to become a grid.
+Creative Agency, UX/UI Designers Portfolio Website
 
-![Image Stack](https://tympanus.net/codrops/wp-content/uploads/2020/11/IntroImageStackAnimation_featured.jpg)
+[comment]: <> (![Image Stack]&#40;https://tympanus.net/codrops/wp-content/uploads/2020/11/IntroImageStackAnimation_featured.jpg&#41;)
 
-[Article on Codrops](https://tympanus.net/codrops/?p=52018)
+[comment]: <> ([Article on Codrops]&#40;https://tympanus.net/codrops/?p=52018&#41;)
 
-[Demo](https://tympanus.net/Development/ImageStackGrid/)
+[comment]: <> ([Demo]&#40;https://tympanus.net/Development/ImageStackGrid/&#41;)
 
 
 ## Installation
@@ -29,19 +29,19 @@ Create the build:
 npm run build
 ```
 
-## Credits
+[comment]: <> (## Credits)
 
-- Images by [Unsplash](http://unsplash.com)
+[comment]: <> (- Images by [Unsplash]&#40;http://unsplash.com&#41;)
 
 
-## Misc
+[comment]: <> (## Misc)
 
-Follow Codrops: [Twitter](http://www.twitter.com/codrops), [Facebook](http://www.facebook.com/codrops), [GitHub](https://github.com/codrops), [Instagram](https://www.instagram.com/codropsss/)
+[comment]: <> (Follow Codrops: [Twitter]&#40;http://www.twitter.com/codrops&#41;, [Facebook]&#40;http://www.facebook.com/codrops&#41;, [GitHub]&#40;https://github.com/codrops&#41;, [Instagram]&#40;https://www.instagram.com/codropsss/&#41;)
 
 ## License
 [MIT](LICENSE)
 
-Made with :blue_heart: by [Codrops](http://www.codrops.com)
+Made with :blue_heart: by [donotdevelopmyapp](https://www.donotdevelopmy.app)
 
 
 

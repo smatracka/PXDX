@@ -1,0 +1,243 @@
+@font-face {
+    font-family: "Heading Pro Wide";
+    src: url("/Heading-Pro-Wide-ExtraBold.7c96758d.woff") format("woff"),
+    url("/Heading-Pro-Wide-ExtraBold.071b3fc2.ttf") format("ttf"),
+    url("/Heading-Pro-Wide-ExtraBold.d272cfe3.eot") format("eot");
+}
+
+
+.title {
+    grid-area: content;
+    /*font-size: 2em;*/
+    margin: 0;
+    /*font-family: 'Heading Pro Wide';*/
+    font-weight: 100;
+    justify-self: center;
+    align-self: center;
+    position: relative;
+    z-index: 1500;
+    color: #fff;
+    pointer-events: none;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*align-self: start;*/
+    text-transform: uppercase;
+    /*margin-top: 1%;*/
+}
+
+.js .title {
+    opacity: 0;
+}
+
+.gallery {
+    grid-area: content;
+    justify-self: center;
+}
+
+.gallery__item {
+    position: relative;
+    margin: 25vh 0;
+    display: grid;
+    grid-template-areas: 'gallery-caption' 'gallery-image';
+    grid-template-columns: 100%;
+}
+
+.gallery__item-img:not(:first-child) {
+    /*grid-area: gallery-image;*/
+    width: 600px;
+    /*width: calc(100vw - 30vw);*/
+    /*max-width: 500px;*/
+    overflow: hidden;
+    position: relative;
+    will-change: transform, opacity;
+    cursor: pointer;
+}
+
+.gallery__item-img:first-child {
+    /*grid-area: gallery-image;*/
+    /*width: calc(100vw - 30vw);*/
+    /*max-width: 100%;*/
+    width: 20vw;
+    overflow: hidden;
+    position: relative;
+    will-change: transform, opacity;
+    cursor: pointer;
+}
+
+/* .gallery__item:first-child {
+	max-width: 100% !important;
+} */
+
+.noscroll .gallery__item-img {
+    cursor: default;
+}
+
+.js .gallery__item-img {
+    opacity: 0;
+}
+
+.gallery__item-imginner {
+    background-size: cover;
+    background-position: 50% 0;
+    width: 100%;
+    padding-bottom: 140%;
+}
+
+.gallery__item-caption {
+    grid-area: gallery-caption;
+    /*padding: 0 0 1rem;*/
+}
+
+.gallery__item-title {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 10vw;
+    font-family: 'Heading Pro Wide';
+    font-weight: 100;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    bottom: 15%;
+    pointer-events: none;
+}
+
+.gallery__item-title span.char {
+    opacity: 0;
+    will-change: transform;
+}
+
+.gallery__item-number {
+    font-family: 'Heading Pro Wide';
+    font-weight: 100;
+    font-size: 2.5rem;
+    border-bottom: 1px solid #494444;
+    width: 100%;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.gallery__item-text {
+    margin: 0;
+}
+
+.gallery__item-number,
+.gallery__item-text {
+    opacity: 0;
+    will-change: transform, opacity;
+}
+
+.hero-wrapper {
+    height: 100vh;
+    width: 100vw;
+    /*position: absolute;*/
+    /*top: 0;*/
+    opacity: 0;
+}
+
+.hero-img {
+    object-fit: cover;
+    width: inherit;
+    height: inherit;
+}
+
+.hidden-element {
+    position: absolute;
+    /*top: 5%;*/
+    width: 100%;
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    opacity: 0;
+    padding: 100px 40px 40px 40px;
+}
+
+.hidden-logo {
+    object-fit: cover;
+    /*width: 100%;*/
+    /*height: auto;*/
+}
+
+.hero-desc {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.hero-info {
+    width: 30%;
+}
+
+.copyrights {
+    text-align: right;
+    width: 20%;
+    align-self: end;
+}
+
+.hero-subtext {
+    width: 50%;
+    padding: 40px;
+    position: relative;
+    bottom: 200px;
+    /*margin-bottom: 10%;*/
+}
+
+/*OFFER SECTION*/
+
+.section-container {
+    height: 100vh;
+    width: 100vw;
+    padding: 0 15%;
+}
+
+/*END OFFER SECTION*/
+
+/*MAIN2*/
+.main2-left{
+	z-index: 5;
+    margin-top: 50%;
+    /*position: absolute;*/
+    /*bottom: 0;*/
+}
+.main2-left-p {
+    width: 50%;
+}
+
+.main2-right {
+    width: 60%;
+    height: 30%;
+    position: absolute;
+	right: 0;
+	z-index: 1;
+}
+
+.main2-photo {
+    width: 100%;
+}
+
+/*END MAIN2*/
+
+@media screen and (min-width: 53em) {
+    .gallery__item {
+        grid-template-areas: 'gallery-filler gallery-image gallery-caption';
+        grid-template-columns: 15vw auto 15vw;
+    }
+
+    .gallery__item-caption {
+        padding: 0 0 0 1rem;
+    }
+}
+
+/*# sourceMappingURL=/demo1.ea7e4db3.css.map */

@@ -1,0 +1,153 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en" class="no-js">-->
+<!--	<head>-->
+<!--		<meta charset="UTF-8" />-->
+<!--		<meta name="viewport" content="width=device-width, initial-scale=1">-->
+<!--		<title>WORKS | PIXIE DIXIE</title>-->
+<!--		<meta name="description" content="Scroll animations for image grids powered by Locomotive Scroll" />-->
+<!--		<meta name="keywords" content="locomotive scroll, scroll animation, website, javascript, demo" />-->
+<!--		<meta name="author" content="Codrops" />-->
+<!--		<link rel="shortcut icon" href="favicon.ico">-->
+<!--		<link rel="stylesheet" href="https://use.typekit.net/rmd7deq.css">-->
+<!--		<link rel="stylesheet" type="text/css" href="css/base.css" />-->
+<!--		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>-->
+<!--		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { &#45;&#45;tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(&#45;&#45;tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>-->
+<!--	</head>-->
+<!--	<body class="demo-2 loading">-->
+<!--		<main data-scroll-container>-->
+<!--			<section id="header" class="content content&#45;&#45;fixed">-->
+<!--				<div class="frame">-->
+<!--					<div class="frame__title-wrap">-->
+<!--						<h1 class="frame__title">Image Tiles Scroll Animation with <a href="https://locomotivemtl.github.io/locomotive-scroll/">Locomotive Scroll</a></h1>-->
+<!--					</div>-->
+<!--					<div class="frame__links">-->
+<!--						<a href="https://tympanus.net/Development/videoTransitions/">Previous demo</a>-->
+<!--						<a href="https://tympanus.net/codrops/?p=51396">Article</a>-->
+<!--						<a href="https://github.com/codrops/TileScroll/">GitHub</a>-->
+<!--					</div>-->
+<!--					<div class="frame__demos">-->
+<!--						<a href="index.html" class="frame__demo">Demo 1</a>-->
+<!--						<a href="works.html" class="frame__demo frame__demo&#45;&#45;current">Demo 2</a>-->
+<!--					-->
+<!--					</div>-->
+<!--				</div>-->
+<!--			</section>-->
+<!--			<section class="tiles tiles&#45;&#45;columns-rotated tiles&#45;&#45;darker" id="grid">-->
+<!--				<div class="tiles__wrap">-->
+<!--					<div class="tiles__line" data-scroll data-scroll-speed="1" data-scroll-target="#grid">-->
+<!--						<div class="tiles__line-img" style="background-image:url(img/demo2/1.jpg)"></div>-->
+<!--						<div class="tiles__line-img" style="background-image:url(img/demo2/2.jpg)"></div>-->
+<!--						<div class="tiles__line-img" style="background-image:url(img/demo2/3.jpg)"></div>-->
+<!--						<div class="tiles__line-img" style="background-image:url(img/demo2/4.jpg)"></div>-->
+<!--						<div class="tiles__line-img" style="background-image:url(img/demo2/5.jpg)"></div>-->
+<!--					</div>-->
+<!--					<div class="tiles__line" data-scroll data-scroll-speed="-1" data-scroll-target="#grid">-->
+<!--						<div class="tiles__line-img" style="background-image:url(img/demo2/5.jpg)"></div>-->
+<!--						<div class="tiles__line-img" style="background-image:url(img/demo2/6.jpg)"></div>-->
+<!--						<div class="tiles__line-img" style="background-image:url(img/demo2/7.jpg)"></div>-->
+<!--						<div class="tiles__line-img" style="background-image:url(img/demo2/8.jpg)"></div>-->
+<!--						<div class="tiles__line-img" style="background-image:url(img/demo2/9.jpg)"></div>-->
+<!--					</div>-->
+<!--					<div class="tiles__line" data-scroll data-scroll-speed="1" data-scroll-target="#grid">-->
+<!--						<div class="tiles__line-img" style="background-image:url(img/demo2/9.jpg)"></div>-->
+<!--						<div class="tiles__line-img" style="background-image:url(img/demo2/10.jpg)"></div>-->
+<!--						<div class="tiles__line-img" style="background-image:url(img/demo2/11.jpg)"></div>-->
+<!--						<div class="tiles__line-img" style="background-image:url(img/demo2/12.jpg)"></div>-->
+<!--						<div class="tiles__line-img" style="background-image:url(img/demo2/13.jpg)"></div>-->
+<!--					</div>-->
+<!--					<div class="tiles__line" data-scroll data-scroll-speed="-1" data-scroll-target="#grid">-->
+<!--						<div class="tiles__line-img" style="background-image:url(img/demo2/13.jpg)"></div>-->
+<!--						<div class="tiles__line-img" style="background-image:url(img/demo2/14.jpg)"></div>-->
+<!--						<div class="tiles__line-img" style="background-image:url(img/demo2/15.jpg)"></div>-->
+<!--						<div class="tiles__line-img" style="background-image:url(img/demo2/16.jpg)"></div>-->
+<!--						<div class="tiles__line-img" style="background-image:url(img/demo2/17.jpg)"></div>-->
+<!--					</div>-->
+<!--					<div class="tiles__line" data-scroll data-scroll-speed="1" data-scroll-target="#grid">-->
+<!--						<div class="tiles__line-img" style="background-image:url(img/demo2/17.jpg)"></div>-->
+<!--						<div class="tiles__line-img" style="background-image:url(img/demo2/18.jpg)"></div>-->
+<!--						<div class="tiles__line-img" style="background-image:url(img/demo2/19.jpg)"></div>-->
+<!--						<div class="tiles__line-img" style="background-image:url(img/demo2/20.jpg)"></div>-->
+<!--						<div class="tiles__line-img" style="background-image:url(img/demo2/1.jpg)"></div>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--				<h2 class="tiles__title">Works</h2>-->
+<!--			</section>-->
+
+<!--			<section>-->
+<!--				<button class="tablink" onclick="openPage('Home', this, 'black')" id="defaultOpen">Amronet</button>-->
+<!--				<button class="tablink" onclick="openPage('News', this, 'green')">News</button>-->
+<!--				<button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>-->
+<!--				<button class="tablink" onclick="openPage('About', this, 'orange')">About</button>-->
+
+<!--				<div id="Home" class="tabcontent">-->
+<!--					<h3>Home</h3>-->
+<!--					<p>Home is where the heart is..</p>-->
+<!--				</div>-->
+
+<!--				<div id="News" class="tabcontent">-->
+<!--					<h3>News</h3>-->
+<!--					<p>Some news this fine day!</p>-->
+<!--				</div>-->
+
+<!--				<div id="Contact" class="tabcontent">-->
+<!--					<h3>Contact</h3>-->
+<!--					<p>Get in touch, or swing by for a cup of coffee.</p>-->
+<!--				</div>-->
+
+<!--				<div id="About" class="tabcontent">-->
+<!--					<h3>About</h3>-->
+<!--					<p>Who we are and what we do.</p>-->
+<!--				</div>-->
+<!--			</section>-->
+<!--			<section class="tiles tiles&#45;&#45;small" id="grid2">-->
+<!--				<div class="tiles__wrap"></div>-->
+<!--					<div class="tiles__line">-->
+<!--						<div class="tiles__line-img" style="background-image:url(img/demo1/10.jpg)" data-scroll data-scroll-speed="1" data-scroll-target="#grid2"></div>-->
+<!--						<div class="tiles__line-img" style="background-image:url(img/demo1/20.jpg)" data-scroll data-scroll-speed="-1" data-scroll-target="#grid2"></div>-->
+<!--						<div class="tiles__line-img" style="background-image:url(img/demo1/3.jpg)" data-scroll data-scroll-speed="1" data-scroll-target="#grid2"></div>-->
+<!--						<div class="tiles__line-img" style="background-image:url(img/demo1/4.jpg)" data-scroll data-scroll-speed="-1" data-scroll-target="#grid2"></div>-->
+<!--						<div class="tiles__line-img" style="background-image:url(img/demo1/19.jpg)" data-scroll data-scroll-speed="1" data-scroll-target="#grid2"></div>-->
+<!--						<div class="tiles__line-img" style="background-image:url(img/demo1/11.jpg)" data-scroll data-scroll-speed="-1" data-scroll-target="#grid2"></div>-->
+<!--						<div class="tiles__line-img" style="background-image:url(img/demo1/28.jpg)" data-scroll data-scroll-speed="1" data-scroll-target="#grid2"></div>-->
+<!--						<div class="tiles__line-img" style="background-image:url(img/demo1/26.jpg)" data-scroll data-scroll-speed="-1" data-scroll-target="#grid2"></div>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--			</section>-->
+<!--			<section class="content">-->
+<!--				<a class="backtop" data-scroll data-scroll-speed="4">Back to the top</a>-->
+<!--				<div class="frame frame&#45;&#45;footer">-->
+<!--					<a href="https://twitter.com/codrops" class="frame__author">@codrops</a>-->
+<!--					<div class="frame__links">-->
+<!--						<a href="https://tympanus.net/Development/videoTransitions/">Previous demo</a>-->
+<!--						<a href="https://tympanus.net/codrops/?p=51396">Article</a>-->
+<!--						<a href="https://github.com/codrops/TileScroll/">GitHub</a>-->
+<!--					</div>-->
+<!--					<div class="frame__demos">-->
+<!--						<a href="index.html" class="frame__demo">Demo 1</a>-->
+<!--						<a href="index2.html" class="frame__demo frame__demo&#45;&#45;current">Demo 2</a>-->
+<!--						-->
+<!--					</div>-->
+<!--				</div>-->
+<!--			</section>-->
+<!--		</main>-->
+<!--		<script src="js/index.js"></script>-->
+<!--	<script>-->
+<!--		function openPage(pageName,elmnt,color) {-->
+<!--			var i, tabcontent, tablinks;-->
+<!--			tabcontent = document.getElementsByClassName("tabcontent");-->
+<!--			for (i = 0; i < tabcontent.length; i++) {-->
+<!--				tabcontent[i].style.display = "none";-->
+<!--			}-->
+<!--			tablinks = document.getElementsByClassName("tablink");-->
+<!--			for (i = 0; i < tablinks.length; i++) {-->
+<!--				tablinks[i].style.backgroundColor = "";-->
+<!--			}-->
+<!--			document.getElementById(pageName).style.display = "block";-->
+<!--			elmnt.style.backgroundColor = color;-->
+<!--		}-->
+
+<!--		// Get the element with id="defaultOpen" and click on it-->
+<!--		document.getElementById("defaultOpen").click();-->
+<!--	</script>-->
+<!--	</body>-->
+<!--</html>-->

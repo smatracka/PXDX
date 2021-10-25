@@ -15061,7 +15061,8 @@ var GalleryController = /*#__PURE__*/function () {
       galleryEl: galleryEl,
       title: document.querySelector('.title'),
       gallery: document.querySelector('.gallery'),
-      frame: document.querySelector('.frame')
+      frame: document.querySelector('.frame'),
+      logoContainer: document.querySelector('.logo-container')
     };
     this.DOM.hero = document.querySelector('#hero');
     this.DOM.titleChars = this.DOM.title.querySelectorAll('.char');
@@ -15083,14 +15084,14 @@ var GalleryController = /*#__PURE__*/function () {
     value: function intro() {
       // create the timeline
       // let's start by animating the main intro text
-      var timeline = _gsap.gsap.timeline().to(this.DOM.title, {
-        duration: 0,
-        ease: 'expo',
+      var timeline = _gsap.gsap.timeline().to(this.DOM.logoContainer, {
+        duration: 1,
+        ease: 'power1',
         startAt: {
           y: '10%'
         },
         x: '0%',
-        y: '25%',
+        // y: -1500,
         // scale: 1.2,
         opacity: 1
       }, 0); // now let's center the images (stack)
@@ -15160,7 +15161,8 @@ var GalleryController = /*#__PURE__*/function () {
         maxWidth: '100%'
       }).set(galleryItemCaption, {
         display: 'none'
-      }) // the other images in the stack will animate its translation values randomly
+      }) // .set('.hero-subtext', { display: 'none'})
+      // the other images in the stack will animate its translation values randomly
       .to(otherImages, {
         duration: 0,
         ease: 'power1 out',
@@ -15229,22 +15231,24 @@ var GalleryController = /*#__PURE__*/function () {
         duration: 5,
         ease: 'expo',
         zIndex: 999
-      }, 'startAnimation') // .set( fra)
+      }, 'startAnimation'); // .set( fra)
       // both the image and inner image animate the scale value to achieve the "reveal effect"
       // .to(this.galleryItems[0].DOM.imgInner, {
       //     duration: 1.2,
       //     ease: 'expo',
       //     scale: 1
       // }, 'startAnimation');
-      .to(heroImgWrapper, {
-        scale: 0.5,
-        scrollTrigger: {
-          // scroller: ,
-          trigger: heroImgWrapper,
-          start: 'top top',
-          scrub: true
-        }
-      }, 'startAnimation'); // finally, animate the gallery item's content elements (title, number and texts)
+      //
+      //     .to(heroImgWrapper, {
+      //         scale: 0.5,
+      //         scrollTrigger: {
+      //             // scroller: ,
+      //             trigger: heroImgWrapper,
+      //             start: 'top top',
+      //             scrub: true
+      //         }
+      //     }, 'startAnimation')
+      // finally, animate the gallery item's content elements (title, number and texts)
 
       var _iterator2 = _createForOfIteratorHelper(this.galleryItems.entries()),
           _step2;
@@ -15270,7 +15274,8 @@ var GalleryController = /*#__PURE__*/function () {
             opacity: 0,
             stagger: {
               from: 'center'
-            }
+            },
+            display: 'none'
           }, 'startAnimation').to([item.DOM.caption.number, item.DOM.caption.texts], {
             duration: 1,
             ease: 'power1',
@@ -15367,7 +15372,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54718" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50261" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

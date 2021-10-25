@@ -26,6 +26,7 @@ export default class GalleryController {
             title: document.querySelector('.title'),
             gallery: document.querySelector('.gallery'),
             frame: document.querySelector('.frame'),
+            logoContainer: document.querySelector('.logo-container'),
         };
         this.DOM.hero = document.querySelector('#hero');
         this.DOM.titleChars = this.DOM.title.querySelectorAll('.char');
@@ -41,12 +42,12 @@ export default class GalleryController {
     intro() {
         // create the timeline
         // let's start by animating the main intro text
-        const timeline = gsap.timeline().to(this.DOM.title, {
-            duration: 0,
-            ease: 'expo',
+        const timeline = gsap.timeline().to(this.DOM.logoContainer, {
+            duration: 1,
+            ease: 'power1',
             startAt: {y: '10%'},
             x: '0%',
-            y: '25%',
+            // y: -1500,
             // scale: 1.2,
             opacity: 1
         }, 0);
@@ -103,6 +104,7 @@ export default class GalleryController {
         }, 'startAnimation')
         .set(firstImage, { maxWidth: '100%'})
         .set(galleryItemCaption, { display: 'none'})
+            // .set('.hero-subtext', { display: 'none'})
 
         // the other images in the stack will animate its translation values randomly
         .to(otherImages, {
@@ -191,16 +193,16 @@ export default class GalleryController {
         //     ease: 'expo',
         //     scale: 1
         // }, 'startAnimation');
-
-            .to(heroImgWrapper, {
-                scale: 0.5,
-                scrollTrigger: {
-                    // scroller: ,
-                    trigger: heroImgWrapper,
-                    start: 'top top',
-                    scrub: true
-                }
-            }, 'startAnimation')
+        //
+        //     .to(heroImgWrapper, {
+        //         scale: 0.5,
+        //         scrollTrigger: {
+        //             // scroller: ,
+        //             trigger: heroImgWrapper,
+        //             start: 'top top',
+        //             scrub: true
+        //         }
+        //     }, 'startAnimation')
 
         // finally, animate the gallery item's content elements (title, number and texts)
         for (const [pos, item] of this.galleryItems.entries()) {
@@ -215,7 +217,8 @@ export default class GalleryController {
                 },
                 x: 0,
                 opacity: 0,
-                stagger: {from: 'center'}
+                stagger: {from: 'center'},
+                display: 'none'
             }, 'startAnimation')
             .to([item.DOM.caption.number,item.DOM.caption.texts], {
                 duration: 1,

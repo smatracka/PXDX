@@ -172,36 +172,6 @@ main {
 	padding-left: -20px;
 }
 
-.logo-pxdx {
-	font-family: 'Heading Pro Wide';
-	font-style: normal;
-	font-weight: 800;
-	font-size: 12px;
-	line-height: 18px;
-	/* identical to box height, or 150% */
-
-	display: flex;
-	align-items: center;
-
-	color: #fff;
-	text-transform: uppercase;
-	text-decoration: none;
-	/* margin-top: 5%; */
-}
-.logo-pxdx:hover {
-	border-bottom: none;
-}
-
-.logo-and {
-	font-size:8px;
-	margin: 0 10px;
-	letter-spacing: 0;
-}
-.logo-container {
-	padding-top: 6%;
-	letter-spacing: 10px;
-}
-
 /*TYPO*/
 
 .header-h1 {

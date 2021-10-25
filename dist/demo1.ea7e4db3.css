@@ -5,31 +5,13 @@
     url("/Heading-Pro-Wide-ExtraBold.d272cfe3.eot") format("eot");
 }
 
-
-.title {
-    grid-area: content;
-    /*font-size: 2em;*/
-    margin: 0;
-    /*font-family: 'Heading Pro Wide';*/
-    font-weight: 100;
-    justify-self: center;
-    align-self: center;
-    position: relative;
-    z-index: 1500;
-    color: #fff;
-    pointer-events: none;
-    width: 100%;
+body {
     height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /*align-self: start;*/
-    text-transform: uppercase;
-    /*margin-top: 1%;*/
+    width: 100vw;
 }
 
 .js .title {
-    opacity: 0;
+    /*opacity: 0;*/
 }
 
 .gallery {
@@ -148,10 +130,6 @@
 .hidden-element {
     position: absolute;
     /*top: 5%;*/
-    width: 100%;
-    /*display: flex;*/
-    /*justify-content: center;*/
-    /*align-items: center;*/
     opacity: 0;
     padding: 100px 40px 40px 40px;
 }
@@ -162,6 +140,7 @@
     /*height: auto;*/
 }
 
+/*HERO*/
 .hero-desc {
     display: flex;
     justify-content: space-between;
@@ -172,7 +151,7 @@
 .hero-content {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-end;
     height: 100vh;
 }
 
@@ -191,7 +170,38 @@
     padding: 40px;
     position: relative;
     bottom: 200px;
-    /*margin-bottom: 10%;*/
+}
+
+.logo-container {
+    position: absolute;
+    /*left: 50%;*/
+    /*bottom: 7%;*/
+    width: 600px;
+    /*padding: 0 5%;*/
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+}
+
+.logo {
+    object-fit: cover;
+    width: 100%;
+}
+
+.title {
+    /*grid-area: content;*/
+    margin: 0;
+    z-index: 9;
+    pointer-events: none;
+    /*width: 100%;*/
+    /*height: 100vh;*/
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+    /*align-self: center;*/
+    /*text-transform: uppercase;*/
+    /*margin-top: 1%;*/
 }
 
 /*OFFER SECTION*/
@@ -228,6 +238,33 @@
 }
 
 /*END MAIN2*/
+
+.logo-pxdx {
+    font-family: 'Heading Pro Wide';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 18px;
+    /* identical to box height, or 150% */
+
+    display: flex;
+    align-items: center;
+
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    /* margin-top: 5%; */
+}
+.logo-pxdx:hover {
+    border-bottom: none;
+}
+
+.logo-and {
+    font-size:8px;
+    margin: 0 10px;
+    letter-spacing: 0;
+}
+
 
 @media screen and (min-width: 53em) {
     .gallery__item {

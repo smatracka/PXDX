@@ -117,7 +117,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../node_modules/ev-emitter/ev-emitter.js":[function(require,module,exports) {
+})({"BQvw":[function(require,module,exports) {
 var define;
 var global = arguments[3];
 /**
@@ -233,7 +233,7 @@ return EvEmitter;
 
 }));
 
-},{}],"../node_modules/imagesloaded/imagesloaded.js":[function(require,module,exports) {
+},{}],"lc7f":[function(require,module,exports) {
 var define;
 /*!
  * imagesLoaded v4.1.4
@@ -613,7 +613,7 @@ return ImagesLoaded;
 
 });
 
-},{"ev-emitter":"../node_modules/ev-emitter/ev-emitter.js"}],"js/utils.js":[function(require,module,exports) {
+},{"ev-emitter":"BQvw"}],"MgTz":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -681,7 +681,7 @@ var preloadFonts = function preloadFonts(id) {
 };
 
 exports.preloadFonts = preloadFonts;
-},{"imagesloaded":"../node_modules/imagesloaded/imagesloaded.js"}],"../node_modules/gsap/gsap-core.js":[function(require,module,exports) {
+},{"imagesloaded":"lc7f"}],"TNS6":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -4687,7 +4687,7 @@ exports.Power3 = Power3;
 exports.Power2 = Power2;
 exports.Power1 = Power1;
 exports.Power0 = Power0;
-},{}],"../node_modules/gsap/CSSPlugin.js":[function(require,module,exports) {
+},{}],"bp4Z":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -6108,7 +6108,7 @@ _gsapCore.gsap.utils.checkPrefix = _checkPropPrefix;
 });
 
 _gsapCore.gsap.registerPlugin(CSSPlugin);
-},{"./gsap-core.js":"../node_modules/gsap/gsap-core.js"}],"../node_modules/gsap/index.js":[function(require,module,exports) {
+},{"./gsap-core.js":"TNS6"}],"TpQl":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -6258,7 +6258,7 @@ TweenMaxWithCSS = gsapWithCSS.core.Tween;
 
 exports.TweenMax = TweenMaxWithCSS;
 exports.default = exports.gsap = gsapWithCSS;
-},{"./gsap-core.js":"../node_modules/gsap/gsap-core.js","./CSSPlugin.js":"../node_modules/gsap/CSSPlugin.js"}],"js/cursor.js":[function(require,module,exports) {
+},{"./gsap-core.js":"TNS6","./CSSPlugin.js":"bp4Z"}],"LMRJ":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -6368,7 +6368,7 @@ var Cursor = /*#__PURE__*/function () {
 }();
 
 exports.default = Cursor;
-},{"gsap":"../node_modules/gsap/index.js","./utils":"js/utils.js"}],"js/demo1/galleryItem.js":[function(require,module,exports) {
+},{"gsap":"TpQl","./utils":"MgTz"}],"dfiF":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -6457,7 +6457,7 @@ var GalleryItem = /*#__PURE__*/function () {
 }();
 
 exports.default = GalleryItem;
-},{"gsap":"../node_modules/gsap/index.js"}],"../node_modules/locomotive-scroll/dist/locomotive-scroll.esm.js":[function(require,module,exports) {
+},{"gsap":"TpQl"}],"ez7q":[function(require,module,exports) {
 var global = arguments[3];
 "use strict";
 
@@ -6466,7 +6466,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = exports.Smooth = exports.Native = void 0;
 
-/* locomotive-scroll v4.1.1 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
+/* locomotive-scroll v4.1.2 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
 function _classCallCheck(instance, Constructor) {
   if (!(instance instanceof Constructor)) {
     throw new TypeError("Cannot call a class as a function");
@@ -7721,7 +7721,7 @@ var _default$1 = /*#__PURE__*/function (_Core) {
 
       window.scrollTo({
         top: offset,
-        behavior: 'smooth'
+        behavior: options.duration === 0 ? 'auto' : 'smooth'
       });
     }
   }, {
@@ -8558,6 +8558,9 @@ var _default$2 = /*#__PURE__*/function (_Core) {
     key: "stopScrolling",
     value: function stopScrolling() {
       cancelAnimationFrame(this.checkScrollRaf); // Prevent checkScroll to continue looping
+      //Pevent scrollbar glitch/locking
+
+      this.startScrollTs = undefined;
 
       if (this.scrollToRaf) {
         cancelAnimationFrame(this.scrollToRaf);
@@ -8916,7 +8919,11 @@ var _default$2 = /*#__PURE__*/function (_Core) {
     key: "releaseScrollBar",
     value: function releaseScrollBar(e) {
       this.isDraggingScrollbar = false;
-      this.html.classList.add(this.scrollingClass);
+
+      if (this.isScrolling) {
+        this.html.classList.add(this.scrollingClass);
+      }
+
       this.html.classList.remove(this.draggingClass);
     }
   }, {
@@ -9611,7 +9618,7 @@ var Native = /*#__PURE__*/function () {
 exports.Native = Native;
 var _default2 = Smooth;
 exports.default = _default2;
-},{}],"../node_modules/splitting/dist/splitting.js":[function(require,module,exports) {
+},{}],"Qdhu":[function(require,module,exports) {
 var define;
 var global = arguments[3];
 (function (global, factory) {
@@ -10111,7 +10118,7 @@ return Splitting;
 
 })));
 
-},{}],"../node_modules/@popperjs/core/lib/enums.js":[function(require,module,exports) {
+},{}],"XHUo":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -10173,7 +10180,7 @@ var afterWrite = 'afterWrite';
 exports.afterWrite = afterWrite;
 var modifierPhases = [beforeRead, read, afterRead, beforeMain, main, afterMain, beforeWrite, write, afterWrite];
 exports.modifierPhases = modifierPhases;
-},{}],"../node_modules/@popperjs/core/lib/dom-utils/getNodeName.js":[function(require,module,exports) {
+},{}],"B1zX":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -10184,7 +10191,7 @@ exports.default = getNodeName;
 function getNodeName(element) {
   return element ? (element.nodeName || '').toLowerCase() : null;
 }
-},{}],"../node_modules/@popperjs/core/lib/dom-utils/getWindow.js":[function(require,module,exports) {
+},{}],"QiNa":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -10204,7 +10211,7 @@ function getWindow(node) {
 
   return node;
 }
-},{}],"../node_modules/@popperjs/core/lib/dom-utils/instanceOf.js":[function(require,module,exports) {
+},{}],"wsKO":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -10237,7 +10244,7 @@ function isShadowRoot(node) {
   var OwnElement = (0, _getWindow.default)(node).ShadowRoot;
   return node instanceof OwnElement || node instanceof ShadowRoot;
 }
-},{"./getWindow.js":"../node_modules/@popperjs/core/lib/dom-utils/getWindow.js"}],"../node_modules/@popperjs/core/lib/modifiers/applyStyles.js":[function(require,module,exports) {
+},{"./getWindow.js":"QiNa"}],"D2nT":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -10334,7 +10341,7 @@ var _default = {
   requires: ['computeStyles']
 };
 exports.default = _default;
-},{"../dom-utils/getNodeName.js":"../node_modules/@popperjs/core/lib/dom-utils/getNodeName.js","../dom-utils/instanceOf.js":"../node_modules/@popperjs/core/lib/dom-utils/instanceOf.js"}],"../node_modules/@popperjs/core/lib/utils/getBasePlacement.js":[function(require,module,exports) {
+},{"../dom-utils/getNodeName.js":"B1zX","../dom-utils/instanceOf.js":"wsKO"}],"QS9h":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -10347,7 +10354,7 @@ var _enums = require("../enums.js");
 function getBasePlacement(placement) {
   return placement.split('-')[0];
 }
-},{"../enums.js":"../node_modules/@popperjs/core/lib/enums.js"}],"../node_modules/@popperjs/core/lib/dom-utils/getBoundingClientRect.js":[function(require,module,exports) {
+},{"../enums.js":"XHUo"}],"W8bA":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -10393,7 +10400,7 @@ includeScale) {
     y: rect.top / scaleY
   };
 }
-},{}],"../node_modules/@popperjs/core/lib/dom-utils/getLayoutRect.js":[function(require,module,exports) {
+},{}],"wDsK":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -10429,7 +10436,7 @@ function getLayoutRect(element) {
     height: height
   };
 }
-},{"./getBoundingClientRect.js":"../node_modules/@popperjs/core/lib/dom-utils/getBoundingClientRect.js"}],"../node_modules/@popperjs/core/lib/dom-utils/contains.js":[function(require,module,exports) {
+},{"./getBoundingClientRect.js":"W8bA"}],"x3Ja":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -10461,7 +10468,7 @@ function contains(parent, child) {
 
   return false;
 }
-},{"./instanceOf.js":"../node_modules/@popperjs/core/lib/dom-utils/instanceOf.js"}],"../node_modules/@popperjs/core/lib/dom-utils/getComputedStyle.js":[function(require,module,exports) {
+},{"./instanceOf.js":"wsKO"}],"S6rb":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -10476,7 +10483,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function getComputedStyle(element) {
   return (0, _getWindow.default)(element).getComputedStyle(element);
 }
-},{"./getWindow.js":"../node_modules/@popperjs/core/lib/dom-utils/getWindow.js"}],"../node_modules/@popperjs/core/lib/dom-utils/isTableElement.js":[function(require,module,exports) {
+},{"./getWindow.js":"QiNa"}],"rK11":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -10491,7 +10498,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function isTableElement(element) {
   return ['table', 'td', 'th'].indexOf((0, _getNodeName.default)(element)) >= 0;
 }
-},{"./getNodeName.js":"../node_modules/@popperjs/core/lib/dom-utils/getNodeName.js"}],"../node_modules/@popperjs/core/lib/dom-utils/getDocumentElement.js":[function(require,module,exports) {
+},{"./getNodeName.js":"B1zX"}],"sJcE":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -10506,7 +10513,7 @@ function getDocumentElement(element) {
   return (((0, _instanceOf.isElement)(element) ? element.ownerDocument : // $FlowFixMe[prop-missing]
   element.document) || window.document).documentElement;
 }
-},{"./instanceOf.js":"../node_modules/@popperjs/core/lib/dom-utils/instanceOf.js"}],"../node_modules/@popperjs/core/lib/dom-utils/getParentNode.js":[function(require,module,exports) {
+},{"./instanceOf.js":"wsKO"}],"IVKl":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -10538,7 +10545,7 @@ function getParentNode(element) {
 
   );
 }
-},{"./getNodeName.js":"../node_modules/@popperjs/core/lib/dom-utils/getNodeName.js","./getDocumentElement.js":"../node_modules/@popperjs/core/lib/dom-utils/getDocumentElement.js","./instanceOf.js":"../node_modules/@popperjs/core/lib/dom-utils/instanceOf.js"}],"../node_modules/@popperjs/core/lib/dom-utils/getOffsetParent.js":[function(require,module,exports) {
+},{"./getNodeName.js":"B1zX","./getDocumentElement.js":"sJcE","./instanceOf.js":"wsKO"}],"CUhI":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -10617,7 +10624,7 @@ function getOffsetParent(element) {
 
   return offsetParent || getContainingBlock(element) || window;
 }
-},{"./getWindow.js":"../node_modules/@popperjs/core/lib/dom-utils/getWindow.js","./getNodeName.js":"../node_modules/@popperjs/core/lib/dom-utils/getNodeName.js","./getComputedStyle.js":"../node_modules/@popperjs/core/lib/dom-utils/getComputedStyle.js","./instanceOf.js":"../node_modules/@popperjs/core/lib/dom-utils/instanceOf.js","./isTableElement.js":"../node_modules/@popperjs/core/lib/dom-utils/isTableElement.js","./getParentNode.js":"../node_modules/@popperjs/core/lib/dom-utils/getParentNode.js"}],"../node_modules/@popperjs/core/lib/utils/getMainAxisFromPlacement.js":[function(require,module,exports) {
+},{"./getWindow.js":"QiNa","./getNodeName.js":"B1zX","./getComputedStyle.js":"S6rb","./instanceOf.js":"wsKO","./isTableElement.js":"rK11","./getParentNode.js":"IVKl"}],"PMyK":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -10628,7 +10635,7 @@ exports.default = getMainAxisFromPlacement;
 function getMainAxisFromPlacement(placement) {
   return ['top', 'bottom'].indexOf(placement) >= 0 ? 'x' : 'y';
 }
-},{}],"../node_modules/@popperjs/core/lib/utils/math.js":[function(require,module,exports) {
+},{}],"FuL6":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -10641,7 +10648,7 @@ var min = Math.min;
 exports.min = min;
 var round = Math.round;
 exports.round = round;
-},{}],"../node_modules/@popperjs/core/lib/utils/within.js":[function(require,module,exports) {
+},{}],"FbIu":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -10654,7 +10661,7 @@ var _math = require("./math.js");
 function within(min, value, max) {
   return (0, _math.max)(min, (0, _math.min)(value, max));
 }
-},{"./math.js":"../node_modules/@popperjs/core/lib/utils/math.js"}],"../node_modules/@popperjs/core/lib/utils/getFreshSideObject.js":[function(require,module,exports) {
+},{"./math.js":"FuL6"}],"a0QL":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -10670,7 +10677,7 @@ function getFreshSideObject() {
     left: 0
   };
 }
-},{}],"../node_modules/@popperjs/core/lib/utils/mergePaddingObject.js":[function(require,module,exports) {
+},{}],"SCz0":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -10685,7 +10692,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function mergePaddingObject(paddingObject) {
   return Object.assign({}, (0, _getFreshSideObject.default)(), paddingObject);
 }
-},{"./getFreshSideObject.js":"../node_modules/@popperjs/core/lib/utils/getFreshSideObject.js"}],"../node_modules/@popperjs/core/lib/utils/expandToHashMap.js":[function(require,module,exports) {
+},{"./getFreshSideObject.js":"a0QL"}],"sYkG":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -10699,7 +10706,7 @@ function expandToHashMap(value, keys) {
     return hashMap;
   }, {});
 }
-},{}],"../node_modules/@popperjs/core/lib/modifiers/arrow.js":[function(require,module,exports) {
+},{}],"zJlD":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -10793,14 +10800,14 @@ function effect(_ref2) {
     }
   }
 
-  if ("development" !== "production") {
+  if ("production" !== "production") {
     if (!(0, _instanceOf.isHTMLElement)(arrowElement)) {
       console.error(['Popper: "arrow" element must be an HTMLElement (not an SVGElement).', 'To use an SVG arrow, wrap it in an HTMLElement that will be used as', 'the arrow.'].join(' '));
     }
   }
 
   if (!(0, _contains.default)(state.elements.popper, arrowElement)) {
-    if ("development" !== "production") {
+    if ("production" !== "production") {
       console.error(['Popper: "arrow" modifier\'s `element` must be a child of the popper', 'element.'].join(' '));
     }
 
@@ -10821,7 +10828,7 @@ var _default = {
   requiresIfExists: ['preventOverflow']
 };
 exports.default = _default;
-},{"../utils/getBasePlacement.js":"../node_modules/@popperjs/core/lib/utils/getBasePlacement.js","../dom-utils/getLayoutRect.js":"../node_modules/@popperjs/core/lib/dom-utils/getLayoutRect.js","../dom-utils/contains.js":"../node_modules/@popperjs/core/lib/dom-utils/contains.js","../dom-utils/getOffsetParent.js":"../node_modules/@popperjs/core/lib/dom-utils/getOffsetParent.js","../utils/getMainAxisFromPlacement.js":"../node_modules/@popperjs/core/lib/utils/getMainAxisFromPlacement.js","../utils/within.js":"../node_modules/@popperjs/core/lib/utils/within.js","../utils/mergePaddingObject.js":"../node_modules/@popperjs/core/lib/utils/mergePaddingObject.js","../utils/expandToHashMap.js":"../node_modules/@popperjs/core/lib/utils/expandToHashMap.js","../enums.js":"../node_modules/@popperjs/core/lib/enums.js","../dom-utils/instanceOf.js":"../node_modules/@popperjs/core/lib/dom-utils/instanceOf.js"}],"../node_modules/@popperjs/core/lib/utils/getVariation.js":[function(require,module,exports) {
+},{"../utils/getBasePlacement.js":"QS9h","../dom-utils/getLayoutRect.js":"wDsK","../dom-utils/contains.js":"x3Ja","../dom-utils/getOffsetParent.js":"CUhI","../utils/getMainAxisFromPlacement.js":"PMyK","../utils/within.js":"FbIu","../utils/mergePaddingObject.js":"SCz0","../utils/expandToHashMap.js":"sYkG","../enums.js":"XHUo","../dom-utils/instanceOf.js":"wsKO"}],"auH8":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -10832,7 +10839,7 @@ exports.default = getVariation;
 function getVariation(placement) {
   return placement.split('-')[1];
 }
-},{}],"../node_modules/@popperjs/core/lib/modifiers/computeStyles.js":[function(require,module,exports) {
+},{}],"ebtt":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -10960,7 +10967,7 @@ function computeStyles(_ref4) {
       _options$roundOffsets = options.roundOffsets,
       roundOffsets = _options$roundOffsets === void 0 ? true : _options$roundOffsets;
 
-  if ("development" !== "production") {
+  if ("production" !== "production") {
     var transitionProperty = (0, _getComputedStyle.default)(state.elements.popper).transitionProperty || '';
 
     if (adaptive && ['transform', 'top', 'right', 'bottom', 'left'].some(function (property) {
@@ -11010,7 +11017,7 @@ var _default = {
   data: {}
 };
 exports.default = _default;
-},{"../enums.js":"../node_modules/@popperjs/core/lib/enums.js","../dom-utils/getOffsetParent.js":"../node_modules/@popperjs/core/lib/dom-utils/getOffsetParent.js","../dom-utils/getWindow.js":"../node_modules/@popperjs/core/lib/dom-utils/getWindow.js","../dom-utils/getDocumentElement.js":"../node_modules/@popperjs/core/lib/dom-utils/getDocumentElement.js","../dom-utils/getComputedStyle.js":"../node_modules/@popperjs/core/lib/dom-utils/getComputedStyle.js","../utils/getBasePlacement.js":"../node_modules/@popperjs/core/lib/utils/getBasePlacement.js","../utils/getVariation.js":"../node_modules/@popperjs/core/lib/utils/getVariation.js","../utils/math.js":"../node_modules/@popperjs/core/lib/utils/math.js"}],"../node_modules/@popperjs/core/lib/modifiers/eventListeners.js":[function(require,module,exports) {
+},{"../enums.js":"XHUo","../dom-utils/getOffsetParent.js":"CUhI","../dom-utils/getWindow.js":"QiNa","../dom-utils/getDocumentElement.js":"sJcE","../dom-utils/getComputedStyle.js":"S6rb","../utils/getBasePlacement.js":"QS9h","../utils/getVariation.js":"auH8","../utils/math.js":"FuL6"}],"psGJ":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -11071,7 +11078,7 @@ var _default = {
   data: {}
 };
 exports.default = _default;
-},{"../dom-utils/getWindow.js":"../node_modules/@popperjs/core/lib/dom-utils/getWindow.js"}],"../node_modules/@popperjs/core/lib/utils/getOppositePlacement.js":[function(require,module,exports) {
+},{"../dom-utils/getWindow.js":"QiNa"}],"M6e4":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -11090,7 +11097,7 @@ function getOppositePlacement(placement) {
     return hash[matched];
   });
 }
-},{}],"../node_modules/@popperjs/core/lib/utils/getOppositeVariationPlacement.js":[function(require,module,exports) {
+},{}],"lLmA":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -11107,7 +11114,7 @@ function getOppositeVariationPlacement(placement) {
     return hash[matched];
   });
 }
-},{}],"../node_modules/@popperjs/core/lib/dom-utils/getWindowScroll.js":[function(require,module,exports) {
+},{}],"oJ75":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -11128,7 +11135,7 @@ function getWindowScroll(node) {
     scrollTop: scrollTop
   };
 }
-},{"./getWindow.js":"../node_modules/@popperjs/core/lib/dom-utils/getWindow.js"}],"../node_modules/@popperjs/core/lib/dom-utils/getWindowScrollBarX.js":[function(require,module,exports) {
+},{"./getWindow.js":"QiNa"}],"zwcJ":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -11154,7 +11161,7 @@ function getWindowScrollBarX(element) {
   // this (e.g. Edge 2019, IE11, Safari)
   return (0, _getBoundingClientRect.default)((0, _getDocumentElement.default)(element)).left + (0, _getWindowScroll.default)(element).scrollLeft;
 }
-},{"./getBoundingClientRect.js":"../node_modules/@popperjs/core/lib/dom-utils/getBoundingClientRect.js","./getDocumentElement.js":"../node_modules/@popperjs/core/lib/dom-utils/getDocumentElement.js","./getWindowScroll.js":"../node_modules/@popperjs/core/lib/dom-utils/getWindowScroll.js"}],"../node_modules/@popperjs/core/lib/dom-utils/getViewportRect.js":[function(require,module,exports) {
+},{"./getBoundingClientRect.js":"W8bA","./getDocumentElement.js":"sJcE","./getWindowScroll.js":"oJ75"}],"E2lw":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -11207,7 +11214,7 @@ function getViewportRect(element) {
     y: y
   };
 }
-},{"./getWindow.js":"../node_modules/@popperjs/core/lib/dom-utils/getWindow.js","./getDocumentElement.js":"../node_modules/@popperjs/core/lib/dom-utils/getDocumentElement.js","./getWindowScrollBarX.js":"../node_modules/@popperjs/core/lib/dom-utils/getWindowScrollBarX.js"}],"../node_modules/@popperjs/core/lib/dom-utils/getDocumentRect.js":[function(require,module,exports) {
+},{"./getWindow.js":"QiNa","./getDocumentElement.js":"sJcE","./getWindowScrollBarX.js":"zwcJ"}],"yEje":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -11251,7 +11258,7 @@ function getDocumentRect(element) {
     y: y
   };
 }
-},{"./getDocumentElement.js":"../node_modules/@popperjs/core/lib/dom-utils/getDocumentElement.js","./getComputedStyle.js":"../node_modules/@popperjs/core/lib/dom-utils/getComputedStyle.js","./getWindowScrollBarX.js":"../node_modules/@popperjs/core/lib/dom-utils/getWindowScrollBarX.js","./getWindowScroll.js":"../node_modules/@popperjs/core/lib/dom-utils/getWindowScroll.js","../utils/math.js":"../node_modules/@popperjs/core/lib/utils/math.js"}],"../node_modules/@popperjs/core/lib/dom-utils/isScrollParent.js":[function(require,module,exports) {
+},{"./getDocumentElement.js":"sJcE","./getComputedStyle.js":"S6rb","./getWindowScrollBarX.js":"zwcJ","./getWindowScroll.js":"oJ75","../utils/math.js":"FuL6"}],"j3Hf":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -11272,7 +11279,7 @@ function isScrollParent(element) {
 
   return /auto|scroll|overlay|hidden/.test(overflow + overflowY + overflowX);
 }
-},{"./getComputedStyle.js":"../node_modules/@popperjs/core/lib/dom-utils/getComputedStyle.js"}],"../node_modules/@popperjs/core/lib/dom-utils/getScrollParent.js":[function(require,module,exports) {
+},{"./getComputedStyle.js":"S6rb"}],"Qnrt":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -11302,7 +11309,7 @@ function getScrollParent(node) {
 
   return getScrollParent((0, _getParentNode.default)(node));
 }
-},{"./getParentNode.js":"../node_modules/@popperjs/core/lib/dom-utils/getParentNode.js","./isScrollParent.js":"../node_modules/@popperjs/core/lib/dom-utils/isScrollParent.js","./getNodeName.js":"../node_modules/@popperjs/core/lib/dom-utils/getNodeName.js","./instanceOf.js":"../node_modules/@popperjs/core/lib/dom-utils/instanceOf.js"}],"../node_modules/@popperjs/core/lib/dom-utils/listScrollParents.js":[function(require,module,exports) {
+},{"./getParentNode.js":"IVKl","./isScrollParent.js":"j3Hf","./getNodeName.js":"B1zX","./instanceOf.js":"wsKO"}],"m3DJ":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -11341,7 +11348,7 @@ function listScrollParents(element, list) {
   return isBody ? updatedList : // $FlowFixMe[incompatible-call]: isBody tells us target will be an HTMLElement here
   updatedList.concat(listScrollParents((0, _getParentNode.default)(target)));
 }
-},{"./getScrollParent.js":"../node_modules/@popperjs/core/lib/dom-utils/getScrollParent.js","./getParentNode.js":"../node_modules/@popperjs/core/lib/dom-utils/getParentNode.js","./getWindow.js":"../node_modules/@popperjs/core/lib/dom-utils/getWindow.js","./isScrollParent.js":"../node_modules/@popperjs/core/lib/dom-utils/isScrollParent.js"}],"../node_modules/@popperjs/core/lib/utils/rectToClientRect.js":[function(require,module,exports) {
+},{"./getScrollParent.js":"Qnrt","./getParentNode.js":"IVKl","./getWindow.js":"QiNa","./isScrollParent.js":"j3Hf"}],"rB0G":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -11357,7 +11364,7 @@ function rectToClientRect(rect) {
     bottom: rect.y + rect.height
   });
 }
-},{}],"../node_modules/@popperjs/core/lib/dom-utils/getClippingRect.js":[function(require,module,exports) {
+},{}],"M7BJ":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -11450,7 +11457,7 @@ function getClippingRect(element, boundary, rootBoundary) {
   clippingRect.y = clippingRect.top;
   return clippingRect;
 }
-},{"../enums.js":"../node_modules/@popperjs/core/lib/enums.js","./getViewportRect.js":"../node_modules/@popperjs/core/lib/dom-utils/getViewportRect.js","./getDocumentRect.js":"../node_modules/@popperjs/core/lib/dom-utils/getDocumentRect.js","./listScrollParents.js":"../node_modules/@popperjs/core/lib/dom-utils/listScrollParents.js","./getOffsetParent.js":"../node_modules/@popperjs/core/lib/dom-utils/getOffsetParent.js","./getDocumentElement.js":"../node_modules/@popperjs/core/lib/dom-utils/getDocumentElement.js","./getComputedStyle.js":"../node_modules/@popperjs/core/lib/dom-utils/getComputedStyle.js","./instanceOf.js":"../node_modules/@popperjs/core/lib/dom-utils/instanceOf.js","./getBoundingClientRect.js":"../node_modules/@popperjs/core/lib/dom-utils/getBoundingClientRect.js","./getParentNode.js":"../node_modules/@popperjs/core/lib/dom-utils/getParentNode.js","./contains.js":"../node_modules/@popperjs/core/lib/dom-utils/contains.js","./getNodeName.js":"../node_modules/@popperjs/core/lib/dom-utils/getNodeName.js","../utils/rectToClientRect.js":"../node_modules/@popperjs/core/lib/utils/rectToClientRect.js","../utils/math.js":"../node_modules/@popperjs/core/lib/utils/math.js"}],"../node_modules/@popperjs/core/lib/utils/computeOffsets.js":[function(require,module,exports) {
+},{"../enums.js":"XHUo","./getViewportRect.js":"E2lw","./getDocumentRect.js":"yEje","./listScrollParents.js":"m3DJ","./getOffsetParent.js":"CUhI","./getDocumentElement.js":"sJcE","./getComputedStyle.js":"S6rb","./instanceOf.js":"wsKO","./getBoundingClientRect.js":"W8bA","./getParentNode.js":"IVKl","./contains.js":"x3Ja","./getNodeName.js":"B1zX","../utils/rectToClientRect.js":"rB0G","../utils/math.js":"FuL6"}],"dvfD":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -11534,7 +11541,7 @@ function computeOffsets(_ref) {
 
   return offsets;
 }
-},{"./getBasePlacement.js":"../node_modules/@popperjs/core/lib/utils/getBasePlacement.js","./getVariation.js":"../node_modules/@popperjs/core/lib/utils/getVariation.js","./getMainAxisFromPlacement.js":"../node_modules/@popperjs/core/lib/utils/getMainAxisFromPlacement.js","../enums.js":"../node_modules/@popperjs/core/lib/enums.js"}],"../node_modules/@popperjs/core/lib/utils/detectOverflow.js":[function(require,module,exports) {
+},{"./getBasePlacement.js":"QS9h","./getVariation.js":"auH8","./getMainAxisFromPlacement.js":"PMyK","../enums.js":"XHUo"}],"Moke":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -11616,7 +11623,7 @@ function detectOverflow(state, options) {
 
   return overflowOffsets;
 }
-},{"../dom-utils/getClippingRect.js":"../node_modules/@popperjs/core/lib/dom-utils/getClippingRect.js","../dom-utils/getDocumentElement.js":"../node_modules/@popperjs/core/lib/dom-utils/getDocumentElement.js","../dom-utils/getBoundingClientRect.js":"../node_modules/@popperjs/core/lib/dom-utils/getBoundingClientRect.js","./computeOffsets.js":"../node_modules/@popperjs/core/lib/utils/computeOffsets.js","./rectToClientRect.js":"../node_modules/@popperjs/core/lib/utils/rectToClientRect.js","../enums.js":"../node_modules/@popperjs/core/lib/enums.js","../dom-utils/instanceOf.js":"../node_modules/@popperjs/core/lib/dom-utils/instanceOf.js","./mergePaddingObject.js":"../node_modules/@popperjs/core/lib/utils/mergePaddingObject.js","./expandToHashMap.js":"../node_modules/@popperjs/core/lib/utils/expandToHashMap.js"}],"../node_modules/@popperjs/core/lib/utils/computeAutoPlacement.js":[function(require,module,exports) {
+},{"../dom-utils/getClippingRect.js":"M7BJ","../dom-utils/getDocumentElement.js":"sJcE","../dom-utils/getBoundingClientRect.js":"W8bA","./computeOffsets.js":"dvfD","./rectToClientRect.js":"rB0G","../enums.js":"XHUo","../dom-utils/instanceOf.js":"wsKO","./mergePaddingObject.js":"SCz0","./expandToHashMap.js":"sYkG"}],"HhJi":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -11658,7 +11665,7 @@ function computeAutoPlacement(state, options) {
   if (allowedPlacements.length === 0) {
     allowedPlacements = placements;
 
-    if ("development" !== "production") {
+    if ("production" !== "production") {
       console.error(['Popper: The `allowedAutoPlacements` option did not allow any', 'placements. Ensure the `placement` option matches the variation', 'of the allowed placements.', 'For example, "auto" cannot be used to allow "bottom-start".', 'Use "auto-start" instead.'].join(' '));
     }
   } // $FlowFixMe[incompatible-type]: Flow seems to have problems with two array unions...
@@ -11677,7 +11684,7 @@ function computeAutoPlacement(state, options) {
     return overflows[a] - overflows[b];
   });
 }
-},{"./getVariation.js":"../node_modules/@popperjs/core/lib/utils/getVariation.js","../enums.js":"../node_modules/@popperjs/core/lib/enums.js","./detectOverflow.js":"../node_modules/@popperjs/core/lib/utils/detectOverflow.js","./getBasePlacement.js":"../node_modules/@popperjs/core/lib/utils/getBasePlacement.js"}],"../node_modules/@popperjs/core/lib/modifiers/flip.js":[function(require,module,exports) {
+},{"./getVariation.js":"auH8","../enums.js":"XHUo","./detectOverflow.js":"Moke","./getBasePlacement.js":"QS9h"}],"rNoN":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -11843,7 +11850,7 @@ var _default = {
   }
 };
 exports.default = _default;
-},{"../utils/getOppositePlacement.js":"../node_modules/@popperjs/core/lib/utils/getOppositePlacement.js","../utils/getBasePlacement.js":"../node_modules/@popperjs/core/lib/utils/getBasePlacement.js","../utils/getOppositeVariationPlacement.js":"../node_modules/@popperjs/core/lib/utils/getOppositeVariationPlacement.js","../utils/detectOverflow.js":"../node_modules/@popperjs/core/lib/utils/detectOverflow.js","../utils/computeAutoPlacement.js":"../node_modules/@popperjs/core/lib/utils/computeAutoPlacement.js","../enums.js":"../node_modules/@popperjs/core/lib/enums.js","../utils/getVariation.js":"../node_modules/@popperjs/core/lib/utils/getVariation.js"}],"../node_modules/@popperjs/core/lib/modifiers/hide.js":[function(require,module,exports) {
+},{"../utils/getOppositePlacement.js":"M6e4","../utils/getBasePlacement.js":"QS9h","../utils/getOppositeVariationPlacement.js":"lLmA","../utils/detectOverflow.js":"Moke","../utils/computeAutoPlacement.js":"HhJi","../enums.js":"XHUo","../utils/getVariation.js":"auH8"}],"jhaw":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -11916,7 +11923,7 @@ var _default = {
   fn: hide
 };
 exports.default = _default;
-},{"../enums.js":"../node_modules/@popperjs/core/lib/enums.js","../utils/detectOverflow.js":"../node_modules/@popperjs/core/lib/utils/detectOverflow.js"}],"../node_modules/@popperjs/core/lib/modifiers/offset.js":[function(require,module,exports) {
+},{"../enums.js":"XHUo","../utils/detectOverflow.js":"Moke"}],"aUNc":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -11985,7 +11992,7 @@ var _default = {
   fn: offset
 };
 exports.default = _default;
-},{"../utils/getBasePlacement.js":"../node_modules/@popperjs/core/lib/utils/getBasePlacement.js","../enums.js":"../node_modules/@popperjs/core/lib/enums.js"}],"../node_modules/@popperjs/core/lib/modifiers/popperOffsets.js":[function(require,module,exports) {
+},{"../utils/getBasePlacement.js":"QS9h","../enums.js":"XHUo"}],"Pf8x":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -12021,7 +12028,7 @@ var _default = {
   data: {}
 };
 exports.default = _default;
-},{"../utils/computeOffsets.js":"../node_modules/@popperjs/core/lib/utils/computeOffsets.js"}],"../node_modules/@popperjs/core/lib/utils/getAltAxis.js":[function(require,module,exports) {
+},{"../utils/computeOffsets.js":"dvfD"}],"YGKJ":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -12032,7 +12039,7 @@ exports.default = getAltAxis;
 function getAltAxis(axis) {
   return axis === 'x' ? 'y' : 'x';
 }
-},{}],"../node_modules/@popperjs/core/lib/modifiers/preventOverflow.js":[function(require,module,exports) {
+},{}],"RwXk":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -12176,7 +12183,7 @@ var _default = {
   requiresIfExists: ['offset']
 };
 exports.default = _default;
-},{"../enums.js":"../node_modules/@popperjs/core/lib/enums.js","../utils/getBasePlacement.js":"../node_modules/@popperjs/core/lib/utils/getBasePlacement.js","../utils/getMainAxisFromPlacement.js":"../node_modules/@popperjs/core/lib/utils/getMainAxisFromPlacement.js","../utils/getAltAxis.js":"../node_modules/@popperjs/core/lib/utils/getAltAxis.js","../utils/within.js":"../node_modules/@popperjs/core/lib/utils/within.js","../dom-utils/getLayoutRect.js":"../node_modules/@popperjs/core/lib/dom-utils/getLayoutRect.js","../dom-utils/getOffsetParent.js":"../node_modules/@popperjs/core/lib/dom-utils/getOffsetParent.js","../utils/detectOverflow.js":"../node_modules/@popperjs/core/lib/utils/detectOverflow.js","../utils/getVariation.js":"../node_modules/@popperjs/core/lib/utils/getVariation.js","../utils/getFreshSideObject.js":"../node_modules/@popperjs/core/lib/utils/getFreshSideObject.js","../utils/math.js":"../node_modules/@popperjs/core/lib/utils/math.js"}],"../node_modules/@popperjs/core/lib/modifiers/index.js":[function(require,module,exports) {
+},{"../enums.js":"XHUo","../utils/getBasePlacement.js":"QS9h","../utils/getMainAxisFromPlacement.js":"PMyK","../utils/getAltAxis.js":"YGKJ","../utils/within.js":"FbIu","../dom-utils/getLayoutRect.js":"wDsK","../dom-utils/getOffsetParent.js":"CUhI","../utils/detectOverflow.js":"Moke","../utils/getVariation.js":"auH8","../utils/getFreshSideObject.js":"a0QL","../utils/math.js":"FuL6"}],"TOq4":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -12256,7 +12263,7 @@ var _popperOffsets = _interopRequireDefault(require("./popperOffsets.js"));
 var _preventOverflow = _interopRequireDefault(require("./preventOverflow.js"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./applyStyles.js":"../node_modules/@popperjs/core/lib/modifiers/applyStyles.js","./arrow.js":"../node_modules/@popperjs/core/lib/modifiers/arrow.js","./computeStyles.js":"../node_modules/@popperjs/core/lib/modifiers/computeStyles.js","./eventListeners.js":"../node_modules/@popperjs/core/lib/modifiers/eventListeners.js","./flip.js":"../node_modules/@popperjs/core/lib/modifiers/flip.js","./hide.js":"../node_modules/@popperjs/core/lib/modifiers/hide.js","./offset.js":"../node_modules/@popperjs/core/lib/modifiers/offset.js","./popperOffsets.js":"../node_modules/@popperjs/core/lib/modifiers/popperOffsets.js","./preventOverflow.js":"../node_modules/@popperjs/core/lib/modifiers/preventOverflow.js"}],"../node_modules/@popperjs/core/lib/dom-utils/getHTMLElementScroll.js":[function(require,module,exports) {
+},{"./applyStyles.js":"D2nT","./arrow.js":"zJlD","./computeStyles.js":"ebtt","./eventListeners.js":"psGJ","./flip.js":"rNoN","./hide.js":"jhaw","./offset.js":"aUNc","./popperOffsets.js":"Pf8x","./preventOverflow.js":"RwXk"}],"uy7N":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -12270,7 +12277,7 @@ function getHTMLElementScroll(element) {
     scrollTop: element.scrollTop
   };
 }
-},{}],"../node_modules/@popperjs/core/lib/dom-utils/getNodeScroll.js":[function(require,module,exports) {
+},{}],"Cbix":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -12295,7 +12302,7 @@ function getNodeScroll(node) {
     return (0, _getHTMLElementScroll.default)(node);
   }
 }
-},{"./getWindowScroll.js":"../node_modules/@popperjs/core/lib/dom-utils/getWindowScroll.js","./getWindow.js":"../node_modules/@popperjs/core/lib/dom-utils/getWindow.js","./instanceOf.js":"../node_modules/@popperjs/core/lib/dom-utils/instanceOf.js","./getHTMLElementScroll.js":"../node_modules/@popperjs/core/lib/dom-utils/getHTMLElementScroll.js"}],"../node_modules/@popperjs/core/lib/dom-utils/getCompositeRect.js":[function(require,module,exports) {
+},{"./getWindowScroll.js":"oJ75","./getWindow.js":"QiNa","./instanceOf.js":"wsKO","./getHTMLElementScroll.js":"uy7N"}],"FCaM":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -12368,7 +12375,7 @@ function getCompositeRect(elementOrVirtualElement, offsetParent, isFixed) {
     height: rect.height
   };
 }
-},{"./getBoundingClientRect.js":"../node_modules/@popperjs/core/lib/dom-utils/getBoundingClientRect.js","./getNodeScroll.js":"../node_modules/@popperjs/core/lib/dom-utils/getNodeScroll.js","./getNodeName.js":"../node_modules/@popperjs/core/lib/dom-utils/getNodeName.js","./instanceOf.js":"../node_modules/@popperjs/core/lib/dom-utils/instanceOf.js","./getWindowScrollBarX.js":"../node_modules/@popperjs/core/lib/dom-utils/getWindowScrollBarX.js","./getDocumentElement.js":"../node_modules/@popperjs/core/lib/dom-utils/getDocumentElement.js","./isScrollParent.js":"../node_modules/@popperjs/core/lib/dom-utils/isScrollParent.js"}],"../node_modules/@popperjs/core/lib/utils/orderModifiers.js":[function(require,module,exports) {
+},{"./getBoundingClientRect.js":"W8bA","./getNodeScroll.js":"Cbix","./getNodeName.js":"B1zX","./instanceOf.js":"wsKO","./getWindowScrollBarX.js":"zwcJ","./getDocumentElement.js":"sJcE","./isScrollParent.js":"j3Hf"}],"mxvt":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -12421,7 +12428,7 @@ function orderModifiers(modifiers) {
     }));
   }, []);
 }
-},{"../enums.js":"../node_modules/@popperjs/core/lib/enums.js"}],"../node_modules/@popperjs/core/lib/utils/debounce.js":[function(require,module,exports) {
+},{"../enums.js":"XHUo"}],"mGsv":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -12444,7 +12451,7 @@ function debounce(fn) {
     return pending;
   };
 }
-},{}],"../node_modules/@popperjs/core/lib/utils/format.js":[function(require,module,exports) {
+},{}],"JD7L":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -12461,7 +12468,7 @@ function format(str) {
     return p.replace(/%s/, c);
   }, str);
 }
-},{}],"../node_modules/@popperjs/core/lib/utils/validateModifiers.js":[function(require,module,exports) {
+},{}],"nr2q":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -12555,7 +12562,7 @@ function validateModifiers(modifiers) {
     });
   });
 }
-},{"./format.js":"../node_modules/@popperjs/core/lib/utils/format.js","../enums.js":"../node_modules/@popperjs/core/lib/enums.js"}],"../node_modules/@popperjs/core/lib/utils/uniqueBy.js":[function(require,module,exports) {
+},{"./format.js":"JD7L","../enums.js":"XHUo"}],"AjzX":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -12574,7 +12581,7 @@ function uniqueBy(arr, fn) {
     }
   });
 }
-},{}],"../node_modules/@popperjs/core/lib/utils/mergeByName.js":[function(require,module,exports) {
+},{}],"pDli":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -12596,7 +12603,7 @@ function mergeByName(modifiers) {
     return merged[key];
   });
 }
-},{}],"../node_modules/@popperjs/core/lib/createPopper.js":[function(require,module,exports) {
+},{}],"rg1d":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -12707,7 +12714,7 @@ function popperGenerator(generatorOptions) {
         }); // Validate the provided modifiers so that the consumer will get warned
         // if one of the modifiers is invalid for any reason
 
-        if ("development" !== "production") {
+        if ("production" !== "production") {
           var modifiers = (0, _uniqueBy.default)([].concat(orderedModifiers, state.options.modifiers), function (_ref) {
             var name = _ref.name;
             return name;
@@ -12759,7 +12766,7 @@ function popperGenerator(generatorOptions) {
         // anymore
 
         if (!areValidElements(reference, popper)) {
-          if ("development" !== "production") {
+          if ("production" !== "production") {
             console.error(INVALID_ELEMENT_ERROR);
           }
 
@@ -12788,7 +12795,7 @@ function popperGenerator(generatorOptions) {
         var __debug_loops__ = 0;
 
         for (var index = 0; index < state.orderedModifiers.length; index++) {
-          if ("development" !== "production") {
+          if ("production" !== "production") {
             __debug_loops__ += 1;
 
             if (__debug_loops__ > 100) {
@@ -12834,7 +12841,7 @@ function popperGenerator(generatorOptions) {
     };
 
     if (!areValidElements(reference, popper)) {
-      if ("development" !== "production") {
+      if ("production" !== "production") {
         console.error(INVALID_ELEMENT_ERROR);
       }
 
@@ -12887,7 +12894,7 @@ function popperGenerator(generatorOptions) {
 var createPopper = /*#__PURE__*/popperGenerator(); // eslint-disable-next-line import/no-unused-modules
 
 exports.createPopper = createPopper;
-},{"./dom-utils/getCompositeRect.js":"../node_modules/@popperjs/core/lib/dom-utils/getCompositeRect.js","./dom-utils/getLayoutRect.js":"../node_modules/@popperjs/core/lib/dom-utils/getLayoutRect.js","./dom-utils/listScrollParents.js":"../node_modules/@popperjs/core/lib/dom-utils/listScrollParents.js","./dom-utils/getOffsetParent.js":"../node_modules/@popperjs/core/lib/dom-utils/getOffsetParent.js","./dom-utils/getComputedStyle.js":"../node_modules/@popperjs/core/lib/dom-utils/getComputedStyle.js","./utils/orderModifiers.js":"../node_modules/@popperjs/core/lib/utils/orderModifiers.js","./utils/debounce.js":"../node_modules/@popperjs/core/lib/utils/debounce.js","./utils/validateModifiers.js":"../node_modules/@popperjs/core/lib/utils/validateModifiers.js","./utils/uniqueBy.js":"../node_modules/@popperjs/core/lib/utils/uniqueBy.js","./utils/getBasePlacement.js":"../node_modules/@popperjs/core/lib/utils/getBasePlacement.js","./utils/mergeByName.js":"../node_modules/@popperjs/core/lib/utils/mergeByName.js","./utils/detectOverflow.js":"../node_modules/@popperjs/core/lib/utils/detectOverflow.js","./dom-utils/instanceOf.js":"../node_modules/@popperjs/core/lib/dom-utils/instanceOf.js","./enums.js":"../node_modules/@popperjs/core/lib/enums.js"}],"../node_modules/@popperjs/core/lib/popper-lite.js":[function(require,module,exports) {
+},{"./dom-utils/getCompositeRect.js":"FCaM","./dom-utils/getLayoutRect.js":"wDsK","./dom-utils/listScrollParents.js":"m3DJ","./dom-utils/getOffsetParent.js":"CUhI","./dom-utils/getComputedStyle.js":"S6rb","./utils/orderModifiers.js":"mxvt","./utils/debounce.js":"mGsv","./utils/validateModifiers.js":"nr2q","./utils/uniqueBy.js":"AjzX","./utils/getBasePlacement.js":"QS9h","./utils/mergeByName.js":"pDli","./utils/detectOverflow.js":"Moke","./dom-utils/instanceOf.js":"wsKO","./enums.js":"XHUo"}],"hwU4":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -12926,7 +12933,7 @@ var createPopper = /*#__PURE__*/(0, _createPopper.popperGenerator)({
 }); // eslint-disable-next-line import/no-unused-modules
 
 exports.createPopper = createPopper;
-},{"./createPopper.js":"../node_modules/@popperjs/core/lib/createPopper.js","./modifiers/eventListeners.js":"../node_modules/@popperjs/core/lib/modifiers/eventListeners.js","./modifiers/popperOffsets.js":"../node_modules/@popperjs/core/lib/modifiers/popperOffsets.js","./modifiers/computeStyles.js":"../node_modules/@popperjs/core/lib/modifiers/computeStyles.js","./modifiers/applyStyles.js":"../node_modules/@popperjs/core/lib/modifiers/applyStyles.js"}],"../node_modules/@popperjs/core/lib/popper.js":[function(require,module,exports) {
+},{"./createPopper.js":"rg1d","./modifiers/eventListeners.js":"psGJ","./modifiers/popperOffsets.js":"Pf8x","./modifiers/computeStyles.js":"ebtt","./modifiers/applyStyles.js":"D2nT"}],"cujj":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -13005,7 +13012,7 @@ var createPopper = /*#__PURE__*/(0, _createPopper.popperGenerator)({
 }); // eslint-disable-next-line import/no-unused-modules
 
 exports.createPopper = createPopper;
-},{"./createPopper.js":"../node_modules/@popperjs/core/lib/createPopper.js","./modifiers/eventListeners.js":"../node_modules/@popperjs/core/lib/modifiers/eventListeners.js","./modifiers/popperOffsets.js":"../node_modules/@popperjs/core/lib/modifiers/popperOffsets.js","./modifiers/computeStyles.js":"../node_modules/@popperjs/core/lib/modifiers/computeStyles.js","./modifiers/applyStyles.js":"../node_modules/@popperjs/core/lib/modifiers/applyStyles.js","./modifiers/offset.js":"../node_modules/@popperjs/core/lib/modifiers/offset.js","./modifiers/flip.js":"../node_modules/@popperjs/core/lib/modifiers/flip.js","./modifiers/preventOverflow.js":"../node_modules/@popperjs/core/lib/modifiers/preventOverflow.js","./modifiers/arrow.js":"../node_modules/@popperjs/core/lib/modifiers/arrow.js","./modifiers/hide.js":"../node_modules/@popperjs/core/lib/modifiers/hide.js","./popper-lite.js":"../node_modules/@popperjs/core/lib/popper-lite.js","./modifiers/index.js":"../node_modules/@popperjs/core/lib/modifiers/index.js"}],"../node_modules/@popperjs/core/lib/index.js":[function(require,module,exports) {
+},{"./createPopper.js":"rg1d","./modifiers/eventListeners.js":"psGJ","./modifiers/popperOffsets.js":"Pf8x","./modifiers/computeStyles.js":"ebtt","./modifiers/applyStyles.js":"D2nT","./modifiers/offset.js":"aUNc","./modifiers/flip.js":"rNoN","./modifiers/preventOverflow.js":"RwXk","./modifiers/arrow.js":"zJlD","./modifiers/hide.js":"jhaw","./popper-lite.js":"hwU4","./modifiers/index.js":"TOq4"}],"vePw":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -13082,7 +13089,7 @@ var _createPopper = require("./createPopper.js");
 var _popper = require("./popper.js");
 
 var _popperLite = require("./popper-lite.js");
-},{"./enums.js":"../node_modules/@popperjs/core/lib/enums.js","./modifiers/index.js":"../node_modules/@popperjs/core/lib/modifiers/index.js","./createPopper.js":"../node_modules/@popperjs/core/lib/createPopper.js","./popper.js":"../node_modules/@popperjs/core/lib/popper.js","./popper-lite.js":"../node_modules/@popperjs/core/lib/popper-lite.js"}],"../node_modules/gsap/ScrollTrigger.js":[function(require,module,exports) {
+},{"./enums.js":"XHUo","./modifiers/index.js":"TOq4","./createPopper.js":"rg1d","./popper.js":"cujj","./popper-lite.js":"hwU4"}],"TgBN":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -14984,7 +14991,7 @@ ScrollTrigger.sort = function (func) {
 };
 
 _getGSAP() && gsap.registerPlugin(ScrollTrigger);
-},{}],"js/demo1/galleryController.js":[function(require,module,exports) {
+},{}],"UEc2":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -15298,7 +15305,7 @@ var GalleryController = /*#__PURE__*/function () {
 }();
 
 exports.default = GalleryController;
-},{"gsap":"../node_modules/gsap/index.js","../utils":"js/utils.js","./galleryItem":"js/demo1/galleryItem.js","locomotive-scroll":"../node_modules/locomotive-scroll/dist/locomotive-scroll.esm.js","splitting":"../node_modules/splitting/dist/splitting.js","@popperjs/core":"../node_modules/@popperjs/core/lib/index.js","gsap/ScrollTrigger":"../node_modules/gsap/ScrollTrigger.js"}],"js/demo1/index.js":[function(require,module,exports) {
+},{"gsap":"TpQl","../utils":"MgTz","./galleryItem":"dfiF","locomotive-scroll":"ez7q","splitting":"Qdhu","@popperjs/core":"vePw","gsap/ScrollTrigger":"TgBN"}],"C3Xv":[function(require,module,exports) {
 "use strict";
 
 var _utils = require("../utils");
@@ -15339,209 +15346,4 @@ Promise.all([(0, _utils.preloadImages)('.gallery__item-imginner'), (0, _utils.pr
     });
   });
 });
-},{"../utils":"js/utils.js","../cursor":"js/cursor.js","./galleryController":"js/demo1/galleryController.js"}],"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
-var global = arguments[3];
-var OVERLAY_ID = '__parcel__error__overlay__';
-var OldModule = module.bundle.Module;
-
-function Module(moduleName) {
-  OldModule.call(this, moduleName);
-  this.hot = {
-    data: module.bundle.hotData,
-    _acceptCallbacks: [],
-    _disposeCallbacks: [],
-    accept: function (fn) {
-      this._acceptCallbacks.push(fn || function () {});
-    },
-    dispose: function (fn) {
-      this._disposeCallbacks.push(fn);
-    }
-  };
-  module.bundle.hotData = null;
-}
-
-module.bundle.Module = Module;
-var checkedAssets, assetsToAccept;
-var parent = module.bundle.parent;
-
-if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
-  var hostname = "" || location.hostname;
-  var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54718" + '/');
-
-  ws.onmessage = function (event) {
-    checkedAssets = {};
-    assetsToAccept = [];
-    var data = JSON.parse(event.data);
-
-    if (data.type === 'update') {
-      var handled = false;
-      data.assets.forEach(function (asset) {
-        if (!asset.isNew) {
-          var didAccept = hmrAcceptCheck(global.parcelRequire, asset.id);
-
-          if (didAccept) {
-            handled = true;
-          }
-        }
-      }); // Enable HMR for CSS by default.
-
-      handled = handled || data.assets.every(function (asset) {
-        return asset.type === 'css' && asset.generated.js;
-      });
-
-      if (handled) {
-        console.clear();
-        data.assets.forEach(function (asset) {
-          hmrApply(global.parcelRequire, asset);
-        });
-        assetsToAccept.forEach(function (v) {
-          hmrAcceptRun(v[0], v[1]);
-        });
-      } else if (location.reload) {
-        // `location` global exists in a web worker context but lacks `.reload()` function.
-        location.reload();
-      }
-    }
-
-    if (data.type === 'reload') {
-      ws.close();
-
-      ws.onclose = function () {
-        location.reload();
-      };
-    }
-
-    if (data.type === 'error-resolved') {
-      console.log('[parcel] ✨ Error resolved');
-      removeErrorOverlay();
-    }
-
-    if (data.type === 'error') {
-      console.error('[parcel] 🚨  ' + data.error.message + '\n' + data.error.stack);
-      removeErrorOverlay();
-      var overlay = createErrorOverlay(data);
-      document.body.appendChild(overlay);
-    }
-  };
-}
-
-function removeErrorOverlay() {
-  var overlay = document.getElementById(OVERLAY_ID);
-
-  if (overlay) {
-    overlay.remove();
-  }
-}
-
-function createErrorOverlay(data) {
-  var overlay = document.createElement('div');
-  overlay.id = OVERLAY_ID; // html encode message and stack trace
-
-  var message = document.createElement('div');
-  var stackTrace = document.createElement('pre');
-  message.innerText = data.error.message;
-  stackTrace.innerText = data.error.stack;
-  overlay.innerHTML = '<div style="background: black; font-size: 16px; color: white; position: fixed; height: 100%; width: 100%; top: 0px; left: 0px; padding: 30px; opacity: 0.85; font-family: Menlo, Consolas, monospace; z-index: 9999;">' + '<span style="background: red; padding: 2px 4px; border-radius: 2px;">ERROR</span>' + '<span style="top: 2px; margin-left: 5px; position: relative;">🚨</span>' + '<div style="font-size: 18px; font-weight: bold; margin-top: 20px;">' + message.innerHTML + '</div>' + '<pre>' + stackTrace.innerHTML + '</pre>' + '</div>';
-  return overlay;
-}
-
-function getParents(bundle, id) {
-  var modules = bundle.modules;
-
-  if (!modules) {
-    return [];
-  }
-
-  var parents = [];
-  var k, d, dep;
-
-  for (k in modules) {
-    for (d in modules[k][1]) {
-      dep = modules[k][1][d];
-
-      if (dep === id || Array.isArray(dep) && dep[dep.length - 1] === id) {
-        parents.push(k);
-      }
-    }
-  }
-
-  if (bundle.parent) {
-    parents = parents.concat(getParents(bundle.parent, id));
-  }
-
-  return parents;
-}
-
-function hmrApply(bundle, asset) {
-  var modules = bundle.modules;
-
-  if (!modules) {
-    return;
-  }
-
-  if (modules[asset.id] || !bundle.parent) {
-    var fn = new Function('require', 'module', 'exports', asset.generated.js);
-    asset.isNew = !modules[asset.id];
-    modules[asset.id] = [fn, asset.deps];
-  } else if (bundle.parent) {
-    hmrApply(bundle.parent, asset);
-  }
-}
-
-function hmrAcceptCheck(bundle, id) {
-  var modules = bundle.modules;
-
-  if (!modules) {
-    return;
-  }
-
-  if (!modules[id] && bundle.parent) {
-    return hmrAcceptCheck(bundle.parent, id);
-  }
-
-  if (checkedAssets[id]) {
-    return;
-  }
-
-  checkedAssets[id] = true;
-  var cached = bundle.cache[id];
-  assetsToAccept.push([bundle, id]);
-
-  if (cached && cached.hot && cached.hot._acceptCallbacks.length) {
-    return true;
-  }
-
-  return getParents(global.parcelRequire, id).some(function (id) {
-    return hmrAcceptCheck(global.parcelRequire, id);
-  });
-}
-
-function hmrAcceptRun(bundle, id) {
-  var cached = bundle.cache[id];
-  bundle.hotData = {};
-
-  if (cached) {
-    cached.hot.data = bundle.hotData;
-  }
-
-  if (cached && cached.hot && cached.hot._disposeCallbacks.length) {
-    cached.hot._disposeCallbacks.forEach(function (cb) {
-      cb(bundle.hotData);
-    });
-  }
-
-  delete bundle.cache[id];
-  bundle(id);
-  cached = bundle.cache[id];
-
-  if (cached && cached.hot && cached.hot._acceptCallbacks.length) {
-    cached.hot._acceptCallbacks.forEach(function (cb) {
-      cb();
-    });
-
-    return true;
-  }
-}
-},{}]},{},["../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/demo1/index.js"], null)
-//# sourceMappingURL=/demo1.151408fb.js.map
+},{"../utils":"MgTz","../cursor":"LMRJ","./galleryController":"UEc2"}]},{},["C3Xv"], null)

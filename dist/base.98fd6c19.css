@@ -1,8 +1,8 @@
 @font-face {
 	font-family: "Heading Pro Wide";
-	src: url("/Heading-Pro-Wide-ExtraBold.7c96758d.woff") format("woff"),
-		 url("/Heading-Pro-Wide-ExtraBold.071b3fc2.ttf") format("ttf"),
-		 url("/Heading-Pro-Wide-ExtraBold.d272cfe3.eot") format("eot");
+	src: url("Heading-Pro-Wide-ExtraBold.7c96758d.woff") format("woff"),
+		 url("Heading-Pro-Wide-ExtraBold.071b3fc2.ttf") format("ttf"),
+		 url("Heading-Pro-Wide-ExtraBold.d272cfe3.eot") format("eot");
   }
 
 *,
@@ -423,5 +423,3 @@ html.has-scroll-dragging {
 	right: auto;
 	bottom: 0;
 }
-
-/*# sourceMappingURL=/base.98fd6c19.css.map */
